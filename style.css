@@ -1,0 +1,92 @@
+.palette {
+    background-color: white;
+    padding: 1.5rem; /* 1 rem is 16 pixels & Leave a little space inside all four edges.*/
+    display: grid; /*your big box becomes a tray that can arrange its children into rows and columns.*/
+    /* Divide the tray into six equally wide spaces */
+    /*Building the basic layout first*/
+    grid-template-columns: repeat(6, 1fr); /*dividing a toy tray into six equally wide spaces.repeat(6, …) means “make six.”*/
+    /* Divide the tray into ten equally tall rows */
+    grid-template-rows: repeat(10, 1fr);
+    gap: 1rem; /*leave small spaces between the colored boxes ven we haven given them colors yet*/
+    height: 100dvh;
+    box-sizing: border-box;
+}
+
+.palette h1 {
+    grid-column: 1 / span 6;
+    background-color: lightblue;
+    margin: 0;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+/*Box1 and box2 are the same size. Their starting rows are different.*/
+.box1 {
+    background-color: crimson;
+    grid-column: 1 / span 2; /*Start at the left edge of column 1, and stretch across 2 columns.*/
+    grid-row: 1 / span 3; /* to make box1 taller : Start at the top of row 1 and stretch down across 3 rows.*/
+}
+
+.box2 {
+    background-color: darkorange;
+    grid-column: 1 / span 2; /*Start in column 1 and cover 2 columns.*/
+    grid-row: 4 / span 3; /*Start in row 4 and cover 3 rows.*/
+}
+
+.box3 {
+    background-color: gold;
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 6;
+}
+
+.box4 {
+    background-color: limegreen;
+    grid-column: 5 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.box5 {
+    background-color: turquoise;
+    grid-column: 5 / span 2;
+    grid-row: 3 / span 2;
+}
+
+.box6 {
+    background-color: deepskyblue;
+    grid-column: 5 / span 2;
+    grid-row: 5 / span 2;
+}
+
+.box7 {
+    background-color: royalblue;
+    grid-column: 1 / span 2;
+    grid-row: 7 / span 4;
+}
+
+.box8 {
+    background-color: blueviolet;
+    grid-column: 3 / span 1;
+    grid-row: 7 / span 2;
+}
+
+.box9 {
+    background-color: purple;
+    grid-column: 3 / span 1;
+    grid-row: 9 / span 2;
+}
+
+.box10 {
+    background-color: hotpink;
+    grid-column: 4 / span 2;
+    grid-row: 7 / span 4;
+}
+
+.box11 {
+    background-color: coral;
+    grid-column: 6 / span 1;
+    grid-row: 7 / span 4;
+}
+
+
+
+
